@@ -1,3 +1,4 @@
+import logging
 from datetime import timedelta
 
 from django.db import transaction
@@ -6,6 +7,8 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 from .models import Trip, CourierIncomeChange, CourierDailySalary, CourierWeeklySalary
+
+logger = logging.getLogger(__name__)
 
 
 @receiver(post_save, sender=Trip)
@@ -31,6 +34,8 @@ def update_courier_daily_salary(sender, instance, **kwargs):
     courier_daily_salary, created = CourierDailySalary.objects.get_or_create(courier=courier, date=date)
     courier_daily_salary.daily_salary = total_income
     courier_daily_salary.save()
+
+    logger.warning(f'id {instance.id} from {sender.__name__} class update or create.')
 
 
 @receiver(post_save, sender=CourierDailySalary)
@@ -58,7 +63,9 @@ def update_courier_weekly_salary(sender, instance, **kwargs):
             Sum('daily_salary'))['daily_salary__sum'] or 0
 
     # finding particular saturday (or creating) and updating weekly salary
-    courier_weeklysalary, created = CourierWeeklySalary.objects.get_or_create(courier=courier,
-                                                                              week_starting_date=saturday_date)
-    courier_weeklysalary.weekly_salary = daily_salary_sum
-    courier_weeklysalary.save()
+    courier_weekly_salary, created = CourierWeeklySalary.objects.get_or_create(courier=courier,
+                                                                               week_starting_date=saturday_date)
+    courier_weekly_salary.weekly_salary = daily_salary_sum
+    courier_weekly_salary.save()
+
+    logger.warning(f'id {instance.id} from {sender.__name__} class update or create.')

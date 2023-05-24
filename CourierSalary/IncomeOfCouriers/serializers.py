@@ -24,7 +24,7 @@ class TripSerializer(serializers.ModelSerializer):
                   'courier',
                   'customer_type',
                   'date',
-                  'distance_from_origin'
+                  'distance_from_origin',
                   'time_of_day',
                   'income']
 

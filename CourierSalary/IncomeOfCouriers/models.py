@@ -57,7 +57,7 @@ class CourierDailySalary(models.Model):
     daily_salary = models.FloatField(default=0, verbose_name='حقوق روزانه')
 
     def __str__(self):
-        return self.courier.user.username + '-' + str(self.date) + '-' + str(self.daily_salary)
+        return self.courier.user.username + ' , ' + str(self.date) + ' , ' + str(self.daily_salary)
 
     class Meta:
         verbose_name = 'حقوق روزانه پیک'

@@ -1,4 +1,4 @@
-Courier Salary Calculator
+### Courier Salary Calculator
 
   This project is a Django-based web application that calculates courier salaries based on their trips 
   and incentives/punishments received from the manager. 

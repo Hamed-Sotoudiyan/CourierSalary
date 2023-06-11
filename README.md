@@ -7,7 +7,7 @@
 
 
 -------------------------------------------------------------------------------------------
-###Installation
+## Installation
 
 To install this project, do the following:
 
@@ -19,7 +19,7 @@ To install this project, do the following:
   5.Make the migrations: python manage.py makemigrations and python manage.py migrate
 
 --------------------------------------------------------------------------------------------
-###Usage
+## Usage
 
 To use this project, do the following:
 

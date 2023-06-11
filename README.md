@@ -6,7 +6,7 @@
   and other libraries to provide a seamless salary calculation experience.
 
 
-
+-------------------------------------------------------------------------------------------
 ###Installation
 To install this project, do the following:
 
@@ -17,6 +17,7 @@ To install this project, do the following:
   4.Install the dependencies: pip install -r requirements.txt
   5.Make the migrations: python manage.py makemigrations and python manage.py migrate
 
+--------------------------------------------------------------------------------------------
 ###Usage
 To use this project, do the following:
 

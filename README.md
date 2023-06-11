@@ -12,6 +12,7 @@
 To install this project, do the following:
 
   1.Clone the repository.
+  
   2.Create a virtual environment: python -m venv env
   3.Activate the virtual environment: source env/bin/activate (for Unix-based systems)
     or .\env\Scripts\activate (for Windows)

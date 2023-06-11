@@ -8,6 +8,7 @@
 
 -------------------------------------------------------------------------------------------
 ###Installation
+
 To install this project, do the following:
 
   1.Clone the repository.
@@ -19,6 +20,7 @@ To install this project, do the following:
 
 --------------------------------------------------------------------------------------------
 ###Usage
+
 To use this project, do the following:
 
   Start the server: python manage.py runserver

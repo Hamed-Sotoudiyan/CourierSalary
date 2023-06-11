@@ -7,7 +7,7 @@
 
 
 
-##Installation
+###Installation
 To install this project, do the following:
 
   1.Clone the repository.
@@ -17,7 +17,7 @@ To install this project, do the following:
   4.Install the dependencies: pip install -r requirements.txt
   5.Make the migrations: python manage.py makemigrations and python manage.py migrate
 
-##Usage
+###Usage
 To use this project, do the following:
 
   Start the server: python manage.py runserver
